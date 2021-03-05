@@ -1,0 +1,53 @@
+<div>
+    <div><h2>Ingresar nuevo Usuario</h2></div>
+    <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombres</mat-label>
+            <input type="text" matInput [formControl]="nombresFormControl" placeholder="Ex. julian david">
+            <mat-error *ngIf="nombresFormControl.hasError('required')">
+                Nombres es <strong>requerido</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Apellidos</mat-label>
+            <input type="text" matInput [formControl]="apellidosFormControl" placeholder="Ex. tamayo sierra">
+            <mat-error *ngIf="apellidosFormControl.hasError('required')">
+                Apellidos es<strong>requerido</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Cedula</mat-label>
+            <input type="number" matInput [formControl]="cedulaFormControl" placeholder="Ex. 1007222864">
+            <mat-error *ngIf="cedulaFormControl.hasError('required')">
+                Cedula es<strong>requerido</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Correo electronico</mat-label>
+            <input type="email" matInput [formControl]="correoFormControl" placeholder="Ex. pat@example.com">
+            <mat-error *ngIf="correoFormControl.hasError('email') && !correoFormControl.hasError('required')">
+                porfavor ingrese un correo valido
+            </mat-error>
+            <mat-error *ngIf="correoFormControl.hasError('required')">
+                Email is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Celular</mat-label>
+            <input type="number" matInput [formControl]="celularFormControl" placeholder="Ex. 3208201784">
+            <mat-error *ngIf="celularFormControl.hasError('required')">
+                Celular es<strong>requerido</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+<div>  <button mat-raised-button (click)="guardarUsuario()" color="primary">Añadir Usuario</button></div>
+</div>
