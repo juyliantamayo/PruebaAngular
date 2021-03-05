@@ -5,6 +5,6 @@
 	   nombres VARCHAR(30),
 		apellidos VARCHAR(30),
 	   cedula VARCHAR(30) UNIQUE,
-	   correo VARCHAR(30) UNIQUE,
-	   telefono VARCHAR(30)
+	   correo VARCHAR(30) ,
+	   telefono VARCHAR(30) UNIQUE
 	) ;
